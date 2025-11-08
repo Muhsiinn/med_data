@@ -1,0 +1,128 @@
+{
+  "date": {
+    "label": "Date",
+    "type": "date",
+    "required": true,
+    "min": null,
+    "max": null
+  },
+  "mood_score": {
+    "label": "Mood Score",
+    "type": "number",
+    "required": true,
+    "min": 1,
+    "max": 10
+  },
+  "panic_intensity": {
+    "label": "Panic Intensity",
+    "type": "number",
+    "required": true,
+    "min": 1,
+    "max": 10
+  },
+  "headache_intensity": {
+    "label": "Headache Intensity",
+    "type": "number",
+    "required": true,
+    "min": 1,
+    "max": 10
+  },
+  "sleep_hours": {
+    "label": "Sleep Hours",
+    "type": "number",
+    "required": true,
+    "min": 0,
+    "max": 24
+  },
+  "hope_score": {
+    "label": "Hope Score",
+    "type": "number",
+    "required": true,
+    "min": 1,
+    "max": 10
+  },
+  "sedation_feeling": {
+    "label": "Sedation Feeling",
+    "type": "number",
+    "required": true,
+    "min": 1,
+    "max": 10
+  },
+  "med1_mg": {
+    "label": "Temesta",
+    "type": "number",
+    "required": true,
+    "min": 0,
+    "max": null
+  },
+  "med2_mg": {
+    "label": "Medication 2 (mg)",
+    "type": "number",
+    "required": true,
+    "min": 0,
+    "max": null
+  },
+  "med3_mg": {
+    "label": "Medication 3 (mg)",
+    "type": "number",
+    "required": true,
+    "min": 0,
+    "max": null
+  },
+  "med4_mg": {
+    "label": "Medication 4 (mg)",
+    "type": "number",
+    "required": true,
+    "min": 0,
+    "max": null
+  },
+  "energy_level": {
+    "label": "Energy Level",
+    "type": "number",
+    "required": false,
+    "min": 1,
+    "max": 10
+  },
+  "appetite": {
+    "label": "Appetite",
+    "type": "number",
+    "required": false,
+    "min": 1,
+    "max": 10
+  },
+  "social_interaction": {
+    "label": "Social Interaction",
+    "type": "number",
+    "required": false,
+    "min": 1,
+    "max": 10
+  },
+  "therapy_session": {
+    "label": "Therapy Session",
+    "type": "text",
+    "required": false,
+    "min": null,
+    "max": null
+  },
+  "suicidal_thoughts": {
+    "label": "Thoughts",
+    "type": "text",
+    "required": false,
+    "min": null,
+    "max": null
+  },
+  "notes": {
+    "label": "Notes",
+    "type": "textarea",
+    "required": true,
+    "min": null,
+    "max": null
+  },
+  "die_thoughts": {
+    "label": "I wanna die?",
+    "type": "number",
+    "required": false,
+    "min": null,
+    "max": null
+  }
+}

@@ -1,0 +1,98 @@
+╔════════════════════════════════════════════════════════════╗
+║   KLINIKUM REPORT EDITOR - QUICK START GUIDE              ║
+╚════════════════════════════════════════════════════════════╝
+
+🚀 GETTING STARTED:
+
+1. Open terminal/command prompt in this folder
+
+2. Install dependencies:
+   pip install flask pandas matplotlib seaborn reportlab
+
+3. Run the application:
+
+   Windows:    double-click run.bat
+   Mac/Linux:  ./run.sh
+
+   OR manually:  python app.py
+
+4. Open browser:
+   http://localhost:5000
+
+═══════════════════════════════════════════════════════════
+
+📊 FEATURES:
+
+✓ View all entries in a table
+✓ Interactive graphs and visualizations
+✓ Export complete PDF report with graphs & notes
+✓ Edit existing entries
+✓ Add new entries
+✓ Delete entries
+✓ Customize fields (add/remove metrics)
+✓ Auto-graph custom numeric fields
+✓ Auto-saves to CSV
+
+📈 GRAPHS:
+
+Click "Graphs" to see:
+- Mood/Panic/Headache trends
+- Medication tracking
+- Wellness metrics
+- Sleep patterns
+- Correlation analysis
+- Custom fields (auto-detected!)
+- And more!
+
+📄 PDF EXPORT:
+
+Click "Export PDF" to download:
+- Summary statistics table
+- Key visualizations
+- All daily notes formatted
+- Timestamped filename
+
+═══════════════════════════════════════════════════════════
+
+🆕 NEW FIELDS ADDED:
+
+In addition to original fields, now includes:
+- Energy Level (1-10)
+- Appetite (1-10)
+- Social Interaction (1-10)
+- Exercise Minutes
+- Therapy Session notes
+
+═══════════════════════════════════════════════════════════
+
+⚙️ FIELD EDITOR:
+
+1. Click "Manage Fields" in the navigation
+2. Add custom fields with:
+   - Field name (internal_name)
+   - Field label (Display Name)
+   - Type (number, text, date, textarea)
+   - Min/max values for numbers
+   - Required/optional setting
+
+3. Delete unwanted fields (except date & notes)
+4. Reset to defaults anytime
+
+═══════════════════════════════════════════════════════════
+
+💡 TIPS:
+
+- Backup your CSV regularly
+- Use descriptive names for custom fields
+- Set validation rules (min/max) to ensure data quality
+- Field configuration stored in fields_config.json
+
+═══════════════════════════════════════════════════════════
+
+🛑 STOP SERVER:
+
+Press Ctrl+C in the terminal
+
+═══════════════════════════════════════════════════════════
+
+For detailed documentation, see README.md

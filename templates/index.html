@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="actions">
+    <a href="{{ url_for('add') }}" class="btn btn-primary">+ Add New Entry</a>
+</div>
+
+{% if entries %}
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                {% for field_name, field_config in fields.items() %}
+                <th>{{ field_config.label }}</th>
+                {% endfor %}
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in entries %}
+            <tr>
+                {% for field_name, field_config in fields.items() %}
+                <td {% if field_config.type == 'textarea' %}class="notes-cell"{% endif %}>
+                    {% if field_config.type == 'textarea' %}
+                        {% set text = entry[field_name]|string if entry[field_name] is not none else '-' %}
+                        {% if text|length > 100 %}
+                            <span class="short-text">{{ text[:100] }}...</span>
+                            <span class="full-text" style="display: none;">{{ text }}</span>
+                            <a href="javascript:void(0)" class="read-more-link" onclick="toggleText(this)">Read more</a>
+                        {% else %}
+                            {{ text }}
+                        {% endif %}
+                    {% else %}
+                        {{ entry[field_name] if entry[field_name] is not none else '-' }}
+                    {% endif %}
+                </td>
+                {% endfor %}
+                <td class="actions-cell">
+                    <a href="{{ url_for('edit', index=loop.index0) }}" class="btn btn-edit">Edit</a>
+                    <a href="{{ url_for('delete', index=loop.index0) }}"
+                       class="btn btn-danger"
+                       onclick="return confirm('Are you sure you want to delete this entry?')">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+<p style="margin-top: 15px; color: #6c757d;">Total entries: {{ entries|length }}</p>
+{% else %}
+<div class="card">
+    <p>No entries found. Click "Add New Entry" to get started!</p>
+</div>
+{% endif %}
+
+{% endblock %}
+
+<script>
+function toggleText(link) {
+    const cell = link.parentElement;
+    const shortText = cell.querySelector('.short-text');
+    const fullText = cell.querySelector('.full-text');
+
+    if (fullText.style.display === 'none') {
+        shortText.style.display = 'none';
+        fullText.style.display = 'inline';
+        link.textContent = 'Read less';
+    } else {
+        shortText.style.display = 'inline';
+        fullText.style.display = 'none';
+        link.textContent = 'Read more';
+    }
+}
+</script>

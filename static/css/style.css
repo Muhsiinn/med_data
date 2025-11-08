@@ -1,0 +1,371 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background: #fafafa;
+    min-height: 100vh;
+    padding: 20px;
+    color: #000;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border: 2px solid #000;
+    box-shadow: 3px 3px 0 #000;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 3px double #000;
+}
+
+h1 {
+    color: #000;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 10px;
+}
+
+.alert {
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    border: 2px solid #000;
+    background: #fff;
+}
+
+.alert-success {
+    border-left: 8px solid #000;
+}
+
+.alert-warning {
+    border-left: 8px solid #666;
+}
+
+.alert-danger {
+    border-left: 8px solid #000;
+    background: #f0f0f0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 2px solid #000;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    transition: all 0.1s;
+    white-space: nowrap;
+}
+
+.btn-primary {
+    background: #000;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #fff;
+    color: #000;
+}
+
+.btn-secondary {
+    background: #fff;
+    color: #000;
+}
+
+.btn-secondary:hover {
+    background: #f0f0f0;
+}
+
+.btn-danger {
+    background: #000;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background: #fff;
+    color: #000;
+}
+
+.btn-edit {
+    background: #fff;
+    color: #000;
+}
+
+.btn-edit:hover {
+    background: #000;
+    color: #fff;
+}
+
+.btn-info {
+    background: #fff;
+    color: #000;
+}
+
+.btn-info:hover {
+    background: #000;
+    color: #fff;
+}
+
+.btn-success {
+    background: #000;
+    color: #fff;
+}
+
+.btn-success:hover {
+    background: #fff;
+    color: #000;
+}
+
+.table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border: 2px solid #000;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #000;
+}
+
+th {
+    background: #000;
+    font-weight: bold;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+tr:hover {
+    background: #f5f5f5;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #000;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+label .required {
+    color: #000;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #000;
+    background: #fff;
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+    transition: none;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border: 2px solid #000;
+    box-shadow: 2px 2px 0 #000;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.actions {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.notes-cell {
+    max-width: 400px;
+    word-wrap: break-word;
+}
+
+.read-more-link {
+    color: #000;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 12px;
+    margin-left: 5px;
+    white-space: nowrap;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.read-more-link:hover {
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 2px 4px;
+}
+
+.actions-cell {
+    white-space: nowrap;
+}
+
+.actions-cell .btn {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 6px 12px;
+    font-size: 12px;
+}
+
+.field-list {
+    display: grid;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.field-item {
+    background: #fff;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #000;
+    margin-bottom: 10px;
+}
+
+.field-info {
+    flex: 1;
+}
+
+.field-name {
+    font-weight: bold;
+    color: #000;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.field-details {
+    color: #000;
+    font-size: 13px;
+    margin-top: 5px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.field-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    font-size: 11px;
+    margin-right: 5px;
+    border: 1px solid #000;
+    background: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.badge-required {
+    background: #000;
+    color: #fff;
+}
+
+.badge-optional {
+    background: #fff;
+    color: #000;
+}
+
+.badge-type {
+    background: #f5f5f5;
+    color: #000;
+}
+
+.add-field-form {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 2px solid #000;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 2px solid #000;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #000;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .table-container {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}

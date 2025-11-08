@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block page_title %}Add New Entry{% endblock %}
+
+{% block content %}
+<form method="POST">
+    <div class="form-row">
+        {% for field_name, field_config in fields.items() %}
+            {% if field_config.type != 'textarea' %}
+            <div class="form-group">
+                <label for="{{ field_name }}">
+                    {{ field_config.label }}
+                    {% if field_config.required %}<span class="required">*</span>{% endif %}
+                </label>
+                <input
+                    type="{{ field_config.type }}"
+                    id="{{ field_name }}"
+                    name="{{ field_name }}"
+                    {% if field_config.type == 'number' and field_config.min is not none %}value="{{ field_config.min }}"{% endif %}
+                    {% if field_config.min is not none %}min="{{ field_config.min }}"{% endif %}
+                    {% if field_config.max is not none %}max="{{ field_config.max }}"{% endif %}
+                    {% if field_config.required %}required{% endif %}>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    {% for field_name, field_config in fields.items() %}
+        {% if field_config.type == 'textarea' %}
+        <div class="form-group">
+            <label for="{{ field_name }}">
+                {{ field_config.label }}
+                {% if field_config.required %}<span class="required">*</span>{% endif %}
+            </label>
+            <textarea
+                id="{{ field_name }}"
+                name="{{ field_name }}"
+                rows="4"
+                placeholder="Enter {{ field_config.label|lower }}..."
+                {% if field_config.required %}required{% endif %}></textarea>
+        </div>
+        {% endif %}
+    {% endfor %}
+
+    <div class="actions">
+        <button type="submit" class="btn btn-primary">Add Entry</button>
+        <a href="{{ url_for('index') }}" class="btn btn-secondary">Cancel</a>
+    </div>
+</form>
+{% endblock %}
